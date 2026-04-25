@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gloire Mananga | Samouraï Combattant Authentique</title><style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Arial,sans-serif;
+background:#020617;
+color:white;
+overflow-x:hidden;
+}
+
+/* Background animation */
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle,#22c55e22 1px,transparent 1px);
+background-size:40px 40px;
+animation:moveBg 20s linear infinite;
+z-index:-1;
+}
+
+@keyframes moveBg{
+0%{transform:translate(0,0)}
+100%{transform:translate(-200px,-200px)}
+}
+
+header{
+background:rgba(30,41,59,0.8);
+padding:15px;
+text-align:center;
+position:sticky;
+top:0;
+backdrop-filter:blur(10px);
+}
+
+nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+section{
+padding:70px 20px;
+max-width:900px;
+margin:auto;
+opacity:0;
+transform:translateY(40px);
+transition:0.6s;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+.hero{text-align:center}
+
+.hero img{
+width:150px;height:150px;border-radius:50%;
+border:3px solid #22c55e;
+margin-bottom:15px;
+}
+
+.hero h2{font-size:36px}
+.hero p{color:#cbd5f5}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+background:#22c55e;
+color:black;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
+transition:0.3s;
+}
+
+.card:hover{transform:translateY(-8px) scale(1.02)}
+
+/* WhatsApp floating */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#22c55e;
+padding:15px;
+border-radius:50%;
+text-decoration:none;
+color:black;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:40px;
+}
+</style></head><body><header>
+<h1>⚔️ Gloire Mananga</h1>
+<nav>
+<a href="#about">À propos</a>
+<a href="#vision">Vision</a>
+<a href="#projects">Projets</a>
+<a href="#contact">Contact</a>
+</nav>
+</header><section class="hero show">
+<img src="image.jpg" alt="photo de gloire Mananga">
+<h2>Samouraï Combattant Authentique</h2>
+<p>Former l'esprit. Élever la jeunesse. Construire l'avenir.</p>
+<a class="btn" href="#contact">Me contacter</a>
+</section><section id="about">
+<h2>🧠 À propos</h2>
+<div class="card">
+<p>Je suis Gloire Mananga, passionné par l'informatique, la spiritualité et la jeunesse. Je forme des esprits forts capables d'affronter la vie avec discipline.</p>
+</div>
+</section><section id="vision">
+<h2>🔥 Ma vision du samouraï</h2>
+<div class="card">
+<p>Un vrai samouraï moderne n'utilise pas seulement l'épée. Il utilise son esprit, sa foi et sa discipline pour transformer le monde. La jeunesse n'est pas faite pour fuir, mais pour combattre avec intelligence et foi.</p>
+</div>
+</section><section id="projects">
+<h2>🚀 Projets</h2>
+<div class="card">
+<h3>AJV</h3>
+<p>AJV ! Ensemble on va le faire ❤️</p>
+</div>
+<div class="card">
+<h3>Samouraï Business</h3>
+<p>Boutique inspirée par la discipline du guerrier.</p>
+</div>
+<div class="card">
+<h3>AJV Café</h3>
+<p>Production de café en RDC avec vision moderne.</p>
+</div>
+</section><section id="contact">
+<h2>📩 Contact</h2>
+<div class="card">
+<p>Email : <a href="mailto:gloiremananga524@gmail.com" style="color:#22c55e">gloiremananga524@gmail.com</a></p>
+<p>WhatsApp : <a href="https://wa.me/243813491187" style="color:#22c55e">Discuter</a></p>
+</div>
+</section><a class="whatsapp" href="https://wa.me/243813491187">💬</a>
+
+<footer>
+<p>© 2026 Gloire Mananga</p>
+</footer><script>
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+const top=window.scrollY;
+const offset=sec.offsetTop-400;
+if(top>offset){sec.classList.add("show");}
+});
+});
+</script></body>
+</html>
